@@ -128,7 +128,7 @@ export function AdminDashboard({ onBack }) {
             <Button variant="ghost" onClick={onBack} className="text-muted-foreground">
               ← Back
             </Button>
-            <h1 className="text-2xl font-serif font-bold">Admin Dashboard</h1>
+            <h1 className="text-2xl font-serif font-bold">Celeb Dashboard</h1>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -143,7 +143,7 @@ export function AdminDashboard({ onBack }) {
               <Settings className="w-5 h-5" />
             </Button>
             <Avatar>
-              <AvatarFallback className="bg-primary text-primary-foreground">AD</AvatarFallback>
+              <AvatarFallback className="bg-primary text-primary-foreground">CD</AvatarFallback>
             </Avatar>
           </div>
         </div>

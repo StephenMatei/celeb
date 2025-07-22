@@ -10,7 +10,7 @@ export function RoleSelector({ onRoleSelect }) {
   const roles = [
     {
       id: 'admin',
-      title: 'Admin Dashboard',
+      title: 'Celeb Portal',
       subtitle: 'Manage celebrities, events & finances',
       icon: Crown,
       features: ['Event Management', 'Team Coordination', 'Financial Reports', 'Calendar Overview'],
@@ -19,7 +19,7 @@ export function RoleSelector({ onRoleSelect }) {
     },
     {
       id: 'client',
-      title: 'Client Portal',
+      title: 'Organizer Portal',
       subtitle: 'Book celebrities & manage events',
       icon: Star,
       features: ['Browse Celebrities', 'Request Bookings', 'Payment Processing', 'Event Planning'],
