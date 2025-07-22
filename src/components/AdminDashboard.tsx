@@ -16,6 +16,7 @@ import {
   Settings,
   LogOut
 } from 'lucide-react';
+import { EventManagement } from './EventManagement';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -120,11 +121,12 @@ export function AdminDashboard({ onBack }: AdminDashboardProps) {
 
   const navigation = [
     { id: 'overview', label: 'Overview', icon: TrendingUp },
-    { id: 'bookings', label: 'Bookings', icon: Calendar },
+    { id: 'events', label: 'Events', icon: Calendar },
+    { id: 'bookings', label: 'Bookings', icon: UserCheck },
     { id: 'celebrities', label: 'Celebrities', icon: Star },
     { id: 'clients', label: 'Clients', icon: Users },
     { id: 'finances', label: 'Finances', icon: DollarSign },
-    { id: 'team', label: 'Team', icon: UserCheck }
+    { id: 'team', label: 'Team', icon: Users }
   ];
 
   return (
@@ -289,8 +291,10 @@ export function AdminDashboard({ onBack }: AdminDashboardProps) {
             </div>
           )}
 
+          {activeTab === 'events' && <EventManagement />}
+
           {/* Other tab content would go here */}
-          {activeTab !== 'overview' && (
+          {activeTab !== 'overview' && activeTab !== 'events' && (
             <div className="flex items-center justify-center h-96">
               <div className="text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">

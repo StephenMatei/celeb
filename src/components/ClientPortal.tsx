@@ -17,6 +17,7 @@ import {
   Eye,
   MessageCircle
 } from 'lucide-react';
+import { EventTicketing } from './EventTicketing';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -111,7 +112,8 @@ export function ClientPortal({ onBack }: ClientPortalProps) {
 
   const navigation = [
     { id: 'discover', label: 'Discover', icon: Star },
-    { id: 'bookings', label: 'My Bookings', icon: Calendar },
+    { id: 'events', label: 'Events & Tickets', icon: Calendar },
+    { id: 'bookings', label: 'My Bookings', icon: CheckCircle },
     { id: 'favorites', label: 'Favorites', icon: Heart },
     { id: 'messages', label: 'Messages', icon: MessageCircle }
   ];
@@ -320,6 +322,8 @@ export function ClientPortal({ onBack }: ClientPortalProps) {
               </div>
             </div>
           )}
+
+          {activeTab === 'events' && <EventTicketing />}
 
           {activeTab === 'bookings' && (
             <div className="space-y-6">
